@@ -1,35 +1,27 @@
-using Exemplo;
 using Microsoft.EntityFrameworkCore;
 using Template.Infra;
+using Template.Servicos;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? "Data Source=alunos.db";
+builder.Services.AddDbContext<DataContext>(options => options.UseSqlite(connectionString));
 
+builder.Services.AddScoped<AlunosDomain>();
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<DataContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
-);
-
-GeradorDeServicos.ServiceProvider = builder.Services.BuildServiceProvider();
-
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Alunos API v1");
+    c.RoutePrefix = "swagger"; // acessível em /swagger
+});
 
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
+app.UseRouting();
 app.MapControllers();
-
 app.Run();
