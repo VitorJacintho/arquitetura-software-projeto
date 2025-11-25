@@ -7,9 +7,13 @@ namespace Template.Infra
     {
         public DataContext CreateDbContext(string[] args)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<DataContext>();
-            optionsBuilder.UseSqlite("Data Source=alunos.db");
-            return new DataContext(optionsBuilder.Options);
+            var optionsBuilderAlunos = new DbContextOptionsBuilder<DataContext>();
+            optionsBuilderAlunos.UseSqlite("Data Source=alunos.db");
+            return new DataContext(optionsBuilderAlunos.Options);
+
+            var optionsBuilderLivros = new DbContextOptionsBuilder<DataContext>();
+            optionsBuilderLivros.UseSqlite("Data Source=livros.db");
+            return new DataContext(optionsBuilderLivros.Options);
         }
     }
 }
