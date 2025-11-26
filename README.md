@@ -1,15 +1,12 @@
 # Sitema de biblioteca Escolar
 
 
-
-
-
-
 1. Configuração de Inicialização
 
     - Precione com o Botão direito na Solução e acesse propriedades
     - selecione 'Varios Projetos de Inicialização:' e mude a ação de todos os projetos para Iniciar
 
+<img width="781" height="542" alt="image" src="https://github.com/user-attachments/assets/1e960201-d3c6-4f8c-8a11-c6405c8e204a" />
 
 
 
@@ -32,6 +29,7 @@
     ```Add-Migration InitialCreate```
 
     ```Update-Database```
+<img width="757" height="165" alt="image" src="https://github.com/user-attachments/assets/456f3019-7ed6-4189-89b9-afa3bf8cf3f0" />
 
 
 
