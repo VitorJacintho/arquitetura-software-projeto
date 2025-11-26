@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template", "Template\Template.csproj", "{3878B6F0-F3B6-443E-B3D6-FFFE9E76F30A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlunosService", "Template\AlunosService.csproj", "{3878B6F0-F3B6-443E-B3D6-FFFE9E76F30A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivrosSevice", "LivrosSevice\LivrosSevice.csproj", "{C61E8250-2C33-4C3D-90B8-6A2A1A6D3662}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivrosService", "LivrosSevice\LivrosService.csproj", "{C61E8250-2C33-4C3D-90B8-6A2A1A6D3662}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmprestimoService", "EmprestimoService\EmprestimoService.csproj", "{3407AD00-E51B-4817-93A3-25F738A2F5D1}"
 EndProject
