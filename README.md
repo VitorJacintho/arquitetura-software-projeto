@@ -40,21 +40,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# o que precisa ter
+# Algumas Especificações do Projeto (Apenas para Conhecimento)
 3 Microsserviços:
 
 Alunos
