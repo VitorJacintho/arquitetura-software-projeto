@@ -1,7 +1,6 @@
 using LivrosService.Infra;
 using LivrosService.Services;
 using Microsoft.EntityFrameworkCore;
-using Template.Servicos;
 
 
 var builder = WebApplication.CreateBuilder(args);

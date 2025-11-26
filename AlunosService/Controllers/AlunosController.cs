@@ -60,5 +60,17 @@ namespace Template.Controllers
             if (!ok) return NotFound();
             return NoContent();
         }
+
+        [HttpPut("{id:int}/incrementa")]
+        public async Task<IActionResult> IncrementarEmprestimos(int id)
+        {
+            var aluno = await _domain.BuscarPorIdAsync(id);
+            if (aluno == null) return NotFound();
+
+            aluno.Qnt_Emprestimo++;
+            await _domain.EditarAsync(id, aluno);
+
+            return NoContent();
+        }
     }
 }
