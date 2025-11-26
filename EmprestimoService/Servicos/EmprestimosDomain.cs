@@ -54,8 +54,8 @@ namespace EmprestimosService.Servicos
             var httpLivros = _httpClientFactory.CreateClient("LivrosService");
 
             // 1ª integração: buscar aluno
-            var aluno = await httpAlunos.GetFromJsonAsync<AlunoRemotoDto>($"api/alunos/{dto.AlunoId}");
-            if (aluno == null || !aluno.Ativo)
+            var aluno = await httpAlunos.GetFromJsonAsync<AlunoRemotoDto>($"alunos/{dto.AlunoId}");
+            if (aluno == null)
                 return null;
 
             // 2ª integração: buscar livro
@@ -75,7 +75,7 @@ namespace EmprestimosService.Servicos
             await _ctx.SaveChangesAsync();
 
             // 3ª integração: alteração – incrementa empréstimos do aluno
-            await httpAlunos.PutAsync($"api/alunos/{dto.AlunoId}/incrementa", null);
+            await httpAlunos.PutAsync($"alunos/{dto.AlunoId}/incrementa", null);
 
             // 4ª integração (extra): marca livro como emprestado
             await httpLivros.PutAsync($"livros/{dto.LivroId}/emprestar", null);

@@ -6,7 +6,7 @@ using Template.Servicos;
 namespace Template.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class AlunosController : ControllerBase
     {
         private readonly AlunosDomain _domain;

@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "Novo Perfil",
+    "Projects": [
+      {
+        "Path": "..\\AlunosService\\AlunosService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\LivrosService\\LivrosService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\EmprestimoService\\EmprestimoService.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
