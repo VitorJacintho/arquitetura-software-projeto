@@ -1,6 +1,6 @@
-using EmprestimosService.Infra;
-using EmprestimosService.Services;
+using EmprestimosService.Servicos;
 using Microsoft.EntityFrameworkCore;
+using EmprestimosService.Infra;
 
 var builder = WebApplication.CreateBuilder(args);
 

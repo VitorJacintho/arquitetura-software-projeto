@@ -1,7 +1,7 @@
 ﻿using LivrosService.DTO;
 using LivrosService.Entities;
-using LivrosService.Infra;
 using Microsoft.EntityFrameworkCore;
+using LivrosService.Infra;
 
 namespace LivrosService.Services
 {

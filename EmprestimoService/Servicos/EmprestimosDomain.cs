@@ -1,6 +1,6 @@
-﻿using System.Net.Http.Json;
-using EmprestimosService.DTO;
+﻿using EmprestimosService.DTO;
 using EmprestimosService.Entities;
+using Microsoft.EntityFrameworkCore;
 using EmprestimosService.Infra;
 
 namespace EmprestimosService.Servicos

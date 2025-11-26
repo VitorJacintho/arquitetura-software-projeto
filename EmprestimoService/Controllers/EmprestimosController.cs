@@ -1,5 +1,5 @@
 ﻿using EmprestimosService.DTO;
-using EmprestimosService.Services;
+using EmprestimosService.Servicos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmprestimosService.Controllers

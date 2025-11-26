@@ -21,11 +21,6 @@ namespace Template.Infra
                 entity.Property(e => e.Nome).IsRequired();
             });
 
-            modelBuilder.Entity<Livros>(entity =>
-            {
-                entity.HasKey(e => e.Id);
-                entity.Property(e => e.Nome).IsRequired();
-            });
         }
     }
 }
